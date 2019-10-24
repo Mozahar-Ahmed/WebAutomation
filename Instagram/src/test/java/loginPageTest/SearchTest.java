@@ -12,7 +12,6 @@ public class SearchTest extends Search {
         loginTest.login();
         clickOnSearchBar();
         typeOnSearchBar("Narendra Modi");
-        //testDropDown();
     }
 
 }

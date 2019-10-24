@@ -7,18 +7,21 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class FooterTest extends CommonAPI {
-Footer footer;
-@BeforeMethod
-public void setPageFactoryOfFooterTest(){
-    footer = PageFactory.initElements(driver, Footer.class);
-}
+
+    Footer footer;
+
+    @BeforeMethod
+    public void setPageFactoryOfFooterTest() {
+        footer = PageFactory.initElements(driver, Footer.class);
+    }
+
     @Test(enabled = true)
     public void aboutUsButtonTest() {
         footer.validateAboutUsDisplayed();
         footer.validateAboutUsClickable();
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void supportButtonTest() {
         footer.supportDisplayed();
         footer.validateSupportClickable();
@@ -64,6 +67,17 @@ public void setPageFactoryOfFooterTest(){
     public void directoryButtonTest() {
         footer.validateProfilesDisplayed();
         footer.validateProfilesClickable();
+    }
+
+    @Test(enabled = false)
+    public void hashtagsButtonTest() {
+        footer.validateHashtagsDisplayed();
+        footer.validateHashtagsClickable();
+    }
+
+    @Test(enabled = false)
+    public void languageButtonTest() {
+        footer.validateLanguageDisplayed();
     }
 
 }

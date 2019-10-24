@@ -34,7 +34,7 @@ public class Login extends CommonAPI {
         TestLogger.log("Clicked on login button");
     }
 
-    public void loginFunctionalityTest() {
+    public void loginFunctionality() {
         clickOnElementByXpath("//a[contains(text(),'Log in')]");
         clickOnElementByXpath("//input[@name='username']");
         typeOnElementByXpath("//input[@name='username']", "demouser95");

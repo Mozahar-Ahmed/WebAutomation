@@ -17,7 +17,7 @@ public class Footer extends CommonAPI {
     @FindBy(linkText = "Help Center")
     public static WebElement supportValue;
 
-    @FindBy(xpath= "//a[contains(text(),'Press')]")
+    @FindBy(xpath = "//a[contains(text(),'Press')]")
     public static WebElement press;
     @FindBy(xpath = "/html/body/main[@class='main']//span[@class='press']")
     public static WebElement pressValue;
@@ -48,9 +48,18 @@ public class Footer extends CommonAPI {
     public static WebElement directoryValue;
 
     @FindBy(linkText = "PROFILES")
-   public static WebElement profiles;
+    public static WebElement profiles;
     @FindBy(xpath = "//div[@class='_13F5E']")
     public static WebElement profilesValue;
+
+    @FindBy(linkText = "HASHTAGS")
+    public static WebElement hashtags;
+    @FindBy(xpath = "//div[@class='_13F5E']")
+    public static WebElement hashtagsValue;
+
+    @FindBy(xpath = "//select[contains(@class,'hztqj')]")
+    public static WebElement language;
+
 
     public void validateAboutUsDisplayed() {
         System.out.println(aboutUs.isDisplayed());
@@ -112,30 +121,49 @@ public class Footer extends CommonAPI {
         Assert.assertEquals(privacyValue.isDisplayed(), true);
     }
 
-    public void validateTermsDisplayed(){
+    public void validateTermsDisplayed() {
         System.out.println(terms.isDisplayed());
-        Assert.assertEquals(terms.isDisplayed(),true);
-    }
-    public void validateTermsClickable(){
-        terms.click();
-        Assert.assertEquals(termsValue.isDisplayed(),true);
+        Assert.assertEquals(terms.isDisplayed(), true);
     }
 
-    public void validateDirectoryDisplayed(){
+    public void validateTermsClickable() {
+        terms.click();
+        Assert.assertEquals(termsValue.isDisplayed(), true);
+    }
+
+    public void validateDirectoryDisplayed() {
         System.out.println(directory.isDisplayed());
-        Assert.assertEquals(directory.isDisplayed(),true);
+        Assert.assertEquals(directory.isDisplayed(), true);
     }
-    public void validateDirectoryClickable(){
+
+    public void validateDirectoryClickable() {
         directory.click();
-        Assert.assertEquals(directory.isDisplayed(),true);
+        Assert.assertEquals(directory.isDisplayed(), true);
     }
-    public void validateProfilesDisplayed(){
+
+    public void validateProfilesDisplayed() {
         System.out.println(profiles.isDisplayed());
-        Assert.assertEquals(profiles.isDisplayed(),true);
+        Assert.assertEquals(profiles.isDisplayed(), true);
     }
-    public void validateProfilesClickable(){
+
+    public void validateProfilesClickable() {
         profiles.click();
-        Assert.assertEquals(profilesValue.isDisplayed(),true);
+        Assert.assertEquals(profilesValue.isDisplayed(), true);
+    }
+
+    public void validateHashtagsDisplayed() {
+        System.out.println(hashtags.isDisplayed());
+        Assert.assertEquals(hashtags.isDisplayed(), true);
+    }
+
+    public void validateHashtagsClickable() {
+        hashtags.click();
+        Assert.assertEquals(hashtagsValue.isDisplayed(), true);
+    }
+
+    public void validateLanguageDisplayed() {
+        System.out.println(language.isDisplayed());
+        Assert.assertEquals(language.isDisplayed(), true);
     }
 
 }

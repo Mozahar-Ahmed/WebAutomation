@@ -6,15 +6,29 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class ForgotPasswordTest extends CommonAPI {
+    ForgotPassword forgotPassword;
+
+    @Test(enabled = false)
+    public void loginButtonInSignupPageValidation() {
+        forgotPassword = PageFactory.initElements(driver, ForgotPassword.class);
+        forgotPassword.validateLoginButtonInSignupPageDisplayed();
+        forgotPassword.validateLoginButtonInSignupPageClickable();
+
+    }
+
+    @Test(enabled = false)
+    public void forgotPasswordButtonValidation() {
+        forgotPassword = PageFactory.initElements(driver, ForgotPassword.class);
+        forgotPassword.validateForgotPasswordButtonDisplayed();
+        forgotPassword.validateForgotPasswordButtonClickable();
+    }
 
     @Test
-    public void forgetPasswordFunctionalityTest() {
-        ForgotPassword forgotPassword = PageFactory.initElements(driver, ForgotPassword.class);
+    public void forgetPasswordFunctionality() {
+        forgotPassword = PageFactory.initElements(driver, ForgotPassword.class);
+        forgotPassword.validateLoginButtonInSignupPageDisplayed();
         forgotPassword.validateLoginButtonInSignupPageClickable();
-        forgotPassword.validateLoginPageDisplayed();
+        forgotPassword.validateForgotPasswordButtonDisplayed();
         forgotPassword.validateForgotPasswordButtonClickable();
-        forgotPassword.forgotPasswordValueDisplayed();
-
-
     }
 }

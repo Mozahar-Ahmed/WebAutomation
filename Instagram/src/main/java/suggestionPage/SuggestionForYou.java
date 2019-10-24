@@ -6,17 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class SuggestionForYou extends CommonAPI {
-    @FindBy(xpath = "//div[contains(text(),'michelleobama')]")
-    public static WebElement michelleobama;
-    @FindBy(xpath = "//h1[contains(text(),'michelleobama')]")
-    public static WebElement michelleobamaPage;
+    @FindBy(xpath = "//h4[contains(@class,'')]")
+    public static WebElement suggestionForYou;
 
-    public void suggestionPageDisplayed(){
-        System.out.println(michelleobama.isDisplayed());
-        Assert.assertEquals(michelleobama.isDisplayed(),true);
-    }
-    public void michelleobamaIsClickable(){
-        michelleobama.click();
-        Assert.assertEquals(michelleobamaPage.isDisplayed(),true);
+    public void suggestionPageDisplayed() {
+        System.out.println(suggestionForYou.isDisplayed());
+        Assert.assertEquals(suggestionForYou.isDisplayed(), true);
     }
 }

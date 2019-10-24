@@ -12,28 +12,28 @@ public class ForgotPassword extends CommonAPI {
     @FindBy(xpath = "//h1[contains(@class,'coreSpriteLoggedOutWordmark')]")
     public static WebElement loginPageView;
 
-    @FindBy(linkText = "//*[@method='post' and @href='/accounts/password/reset/']")
+    @FindBy(xpath = "//*[@method='post' and @href='/accounts/password/reset/']")
     public static WebElement forgotPasswordButton;
     @FindBy(xpath = "//span[contains(@class,'coreSpriteLockSmall')]")
-    public static WebElement forgotPasswordValue;
+    public static WebElement passwordRetrievePage;
 
-    public void validateLoginButtonInSignupPageClickable() {
-        loginButtonInSignupPage.click();
+    public void validateLoginButtonInSignupPageDisplayed() {
+        System.out.println(loginButtonInSignupPage.isDisplayed());
         Assert.assertEquals(loginButtonInSignupPage.isDisplayed(), true);
     }
 
-    public void validateLoginPageDisplayed() {
-        System.out.println(loginButtonInSignupPage.isDisplayed());
+    public void validateLoginButtonInSignupPageClickable() {
+        loginButtonInSignupPage.click();
         Assert.assertEquals(loginPageView.isDisplayed(), true);
+    }
+
+    public void validateForgotPasswordButtonDisplayed() {
+        System.out.println(forgotPasswordButton.isDisplayed());
+        Assert.assertEquals(forgotPasswordButton.isDisplayed(), true);
     }
 
     public void validateForgotPasswordButtonClickable() {
         forgotPasswordButton.click();
-        Assert.assertEquals(forgotPasswordButton.isDisplayed(), true);
-    }
-
-    public void forgotPasswordValueDisplayed() {
-        System.out.println(forgotPasswordButton.isDisplayed());
-        Assert.assertEquals(forgotPasswordValue.isDisplayed(), true);
+        Assert.assertEquals(passwordRetrievePage.isDisplayed(), true);
     }
 }

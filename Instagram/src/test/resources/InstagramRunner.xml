@@ -11,7 +11,7 @@
 
     <test name="Automation tests">
         <classes>
-            <class name="homepagetests.SearchTests"/>
+            <class name="suggestionPageTest.SuggestionForYouTest"/>
         </classes>
     </test>
 </suite>
